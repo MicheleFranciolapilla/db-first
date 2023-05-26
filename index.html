@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Tabella auto in vendita</title>
+</head>
+<body>
+    <div class="container-fluid bg-dark" style="min-height: 100vh;">
+        <header>
+            <h1 class="text-center text-white">Tabella auto in vendita in concessionaria</h1>
+        </header>
+        <main>
+            <table class="table">
+                <thead>
+                    <tr class="text-info">
+                        <th scope="col">(*)</th>
+                        <th scope="col">CHIAVE</th>
+                        <th scope="col">TIPOLOGIA DATO</th>
+                        <th scope="col">ATTRIBUTI</th>
+                        <th scope="col">PRIMARY</th>
+                    </tr>
+                </thead>
+                <tbody class="text-light">
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Id</td>
+                        <td>Small</td>
+                        <td>Not-null / Unique / Auto-Incrementante</td>
+                        <td>Primary Key</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">*</td>
+                        <td>Marca</td>
+                        <td>VarChar(25)</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td scope="row">*</td>
+                        <td>Modello</td>
+                        <td>VarChar(50)</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Cilindrata</td>
+                        <td>Small / <br> Float(4,2)</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td scope="row">*</td>
+                        <td>Alimentazione</td>
+                        <td>VarChar(25)</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr>   
+                    <tr>
+                        <td scope="row">*</td>
+                        <td>Colore</td>
+                        <td>VarChar(30) / <br> TinyInt</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr> 
+                    <tr>
+                        <td scope="row">**</td>
+                        <td>Nuovo / <br> Usato</td>
+                        <td>VarChar(5) / <br> TinyInt</td>
+                        <td>Not-null / <br> Default(Nuovo)</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Condizioni</td>
+                        <td>VarChar(150)</td>
+                        <td>Default(Nuovo)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">***</td>
+                        <td>Anno</td>
+                        <td>Year / <br> Date</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr>                
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Allestimento / <br> Accessori di serie</td>
+                        <td>VarChar(255) / <br> Text</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Accessori optional</td>
+                        <td>VarChar(255) / <br> Text</td>
+                        <td></td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Chilometraggio</td>
+                        <td>MediumInt</td>
+                        <td>Default(0)</td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Numero proprietari precedenti</td>
+                        <td>TinyInt</td>
+                        <td>Default(0)</td>
+                        <td></td>
+                    </tr>     
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Incidentata</td>
+                        <td>VarChar(2)</td>
+                        <td>Default(NO)</td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Pezzi riparati / sostituiti</td>
+                        <td>VarChar(255) / <br> Text</td>
+                        <td>Default(Nuovo)</td>
+                        <td></td>
+                    </tr>               
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Prezzo</td>
+                        <td>Decimal(9,2)</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row"></td>
+                        <td>Finanziabile</td>
+                        <td>VarChar(255)</td>
+                        <td>Not-null</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">****</td>
+                        <td>Matricola telaio</td>
+                        <td>VarChar(30)</td>
+                        <td>Not-null / Unique</td>
+                        <td>Chiave univoca</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">****</td>
+                        <td>Matricola motore</td>
+                        <td>VarChar(30)</td>
+                        <td>Not-null / Unique</td>
+                        <td>Chiave univoca</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="height: 5px;" class="bg-warning my-5"></div>
+            <table class="table">
+                <thead>
+                    <tr class="text-info">
+                        <th scope="col">(*)</th>
+                        <th scope="col">NOTE</th>
+                    </tr>
+                </thead>
+                <tbody class="text-light">
+                    <tr>
+                        <td>*</td>
+                        <td>
+                            Si potrebbero risparmiare tanti bytes, semplicemente assegnando al campo un valore numerico (esempio: TinyInt o anche Small). Tale valore numerico rappresenterebbe una chiave univoca (eventualmente la Primary Key) all'interno di una ulteriore tabella (una tabella per le Marche ed una per i Modelli) in cui vi siano, appunto, le stringhe di riferimento. Sarebbe poi compito di una funzione ad hoc, mostrare all'utente la stringa (Marca o Modello), partendo dalla lettura del valore numerico di cui sopra.
+                            Lo stesso tipo di ragionamento lo si potrebbe fare anche per i campi "Alimentazione" e "Colore".
+                            All'estremo, anche il campo "Cilindrata" potrebbe avvalersi di questa funzionalità, anche se, in questo caso, forse il guadagno in termini di bytes non giustificherebbe l'onere del lavoro extra.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>**</td>
+                        <td>
+                            Per il campo "Nuovo / Usato", un VarChar(5) sarebbe sufficiente. Le eventuali, ulteriori informazioni sarebbero presenti nel campo "Condizioni".
+                            Addirittura si potrebbe anche solo usare un VarChar(1): ['N','U']
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>***</td>
+                        <td>
+                            Per il campo "Anno", la soluzione migliore sarebbe quella di un dato di tipo "Year". La soluzione "Date" tornerebbe utile solo se si volesse indicare anche il mese di produzione.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>****</td>
+                        <td>
+                            Le matricole (telaio e motore), essendo univoche (potenzialmente, almeno nell'ambito della casa produttrice) potrebbero rappresentare delle chiavi di ricerca univoche all'interno delle tabelle viste al punto (*). Si tratterebbe comunque di due dati necessari per fini legali / amministrativi ma non certo per la visualizzazione su una pagina web o una rivista finalizzata alla vendita.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
